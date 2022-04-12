@@ -9,14 +9,19 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
-hr{
-    border-color: #ececec;
-    border-width: 3px;
-}
 h1 {
-    font-size: 3rm;
-    color: #e3dbdb;
+    font-size: 3rem;
+    color: #e2dbdb; 
 }
+.buffer {
+    height: 10rem;
+}
+hr {
+    border-color: #ec5c0e;
+    border-width: 3px;
+    max-width: 65px;
+}
+
 
 .btn {
     font-weight: 700;
@@ -33,5 +38,5 @@ h1 {
     border-width: 4px;
 }
 .btn-xl {
-    padding: 1rm 2rm;
+    padding: 1rem 2rem;
 }
