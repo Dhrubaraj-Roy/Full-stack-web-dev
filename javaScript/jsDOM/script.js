@@ -41,12 +41,15 @@ function inputLength(){
 function addListAfterClick(){
 	if(inputLength() > 0){
 		createListElement();
+		createRemoveButton();
+
 		
 	}
 }
 function addListAfterKeypress(event){
 	if(inputLength() > 0 && event.code === "Enter"){
 		createListElement();
+		createRemoveButton();
 	}
 
 }
@@ -57,6 +60,27 @@ function createListElement(){
 		ul.appendChild(li);  
 		input.value = "";
 }
+function createRemoveButton(){
+	var button = document.createElement("button");
+	button.appendChild(document.createTextNode("remove"));
+	ul.appendChild(button);
+	button.id ="myBtn";
+	input.value = "";
+}
+
+function createId(obj) {
+	obj.id = "myList";
+}
+function removeTheItem(){
+	console.log("ccc")
+	var myList = document.getElementById("myList");
+	myList.innerHTML = "";
+}
+
 
 button.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress);
+// button.addEventListener("click", removeTheItem);
+var btn2 = document.getElementById("myBtn");
+btn2.addEventListener("click", removeTheItem);
+// document.getElementById("myBtn").addEventListener("click", removeTheItem);
